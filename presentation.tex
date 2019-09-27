@@ -1,0 +1,98 @@
+\documentclass[notheorems]{beamer}
+
+% BEAMER SETTINGS
+\usetheme{CambridgeUS}
+\usecolortheme{dolphin}
+
+\setbeamertemplate{theorems}[numbered]
+
+\AtBeginSection[]
+{
+    \begin{frame}{Agenda}
+        \tableofcontents[currentsection]
+    \end{frame}
+}
+
+\AtBeginSubsection[]
+{
+    \begin{frame}{Agenda}
+        \tableofcontents[currentsection,currentsubsection]
+    \end{frame}
+}
+
+
+% IMPORTS
+\usepackage[ngerman]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amstext}
+\usepackage{float}
+\usepackage{hyperref}
+
+% NEWCOMMANDS
+% Syntax: \newcommand{\shortcut}{\wasrauskommensoll}
+
+% Shortcuts für Zahlenbereiche:
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\Q}{\mathbb{Q}}
+
+% THEOREMSTYLES
+
+\newtheorem{theorem}{Satz} % Sätze, sollte später evtl. noch Lemma und Korollar hinzufügen
+\numberwithin{theorem}{section}
+
+\newtheorem{mydef}[theorem]{Definition} % Definitionen
+\numberwithin{theorem}{section}
+
+\newtheorem{example}[theorem]{Beispiel} % Beispiele
+\numberwithin{theorem}{section}
+
+\newtheorem{proposition}[theorem]{Proposition} % Propositionen
+\numberwithin{theorem}{section}
+
+\newtheorem{remark}[theorem]{Bemerkung} % Bemerkungen
+\numberwithin{theorem}{section}
+
+\newtheorem{lemma}[theorem]{Lemma} % Lemmata
+\numberwithin{theorem}{section}
+
+\newtheorem*{proof*}{Beweis:}
+
+% PDF-META
+\hypersetup{pdftex,
+            pdfauthor={Jonas Köppl, Maximilian Reif, Peter Mader},
+            pdftitle={Brückenkurs Mathematik -- Beamer-Präsentation},
+            pdfsubject={},
+            pdfkeywords={},
+            pdfproducer={},
+            pdfcreator={},
+            pdfpagemode=UseOutlines
+}
+
+\title{Brückenkurs Mathematik}
+\author[]{Jonas Köppl, Maximilian Reif, Peter Mader}
+\institute[]{Universität Passau}
+\date{}
+
+\begin{document}
+
+\begin{frame}
+    \titlepage
+\end{frame}
+
+\begin{frame}{Agenda}
+    \tableofcontents
+\end{frame}
+
+\include{presentation-chapters/01-Einfuehrung}
+\include{presentation-chapters/02-Grundlagen}
+\include{presentation-chapters/03-Mengen}
+\include{presentation-chapters/04-Aufbau}
+\include{presentation-chapters/05-Relationen}
+
+\end{document}

@@ -1,0 +1,179 @@
+\section{Logische Grundlagen}
+
+\begin{frame}
+Bevor wir uns mit Beweisen beschäftigen können, müssen zunächst die dafür
+notwendigen logischen Grundlagen erarbeitet werden.
+Hierzu benötigen wir eingangs ein paar Definitionen.
+\end{frame}
+
+
+\begin{frame}
+\begin{mydef}
+Eine \textit{Aussage} ist ein sprachliches Gebilde, das entweder wahr oder
+falsch ist.
+Dabei ist es nicht erforderlich, sagen zu können, \textit{ob} die Aussage wahr
+oder falsch ist.
+\end{mydef}
+\end{frame}
+
+
+\begin{frame}
+Am besten veranschaulichen wir uns das mit einem Beispiel und einer Übungsaufgabe.
+
+\begin{example}
+\begin{enumerate}
+\item Es regnet. (Zeit- und ortsabhängig wahr oder falsch.)
+\item 11 ist durch 5 teilbar. (Falsch.)
+\item Es gibt unendlich viele Primzahlen. (Wahr, Beweis folgt.)
+\item Es gibt unendlich viele Primzahlzwillinge. (Unbewiesen, Stand 17.10.18.)
+\end{enumerate}
+\end{example}
+\end{frame}
+
+
+\begin{frame}
+Wir interessieren uns vor allem für mathematische Aussagen und deren
+Wahrheitsgehalt.
+Zunächst benötigen wir jedoch noch Möglichkeiten, um mehrere Aussagen
+\textit{logisch zu verknüpfen}.
+\end{frame}
+
+
+\begin{frame}
+\begin{mydef}
+Wenn $P$ und $Q$ Aussagen sind, dann heißt $P \wedge Q$ die
+\textit{Konjunktion} von $P$ und $Q$.
+Der Wahrheitswert von $P \wedge Q$ ist definiert durch die Wahrheitswerte von
+$P$ und $Q$ mittels folgender \textit{Wahrheitstafel}:
+
+\begin{table}[H]
+\centering
+\begin{tabular}{c|c|c}
+$P$ & $Q$ & $P \wedge Q$ \\ \hline
+w   & w   & w \\
+w   & f   & f \\
+f   & w   & f \\
+f   & f   & f
+\end{tabular}
+\end{table}
+
+Das heißt $P \wedge Q$ ist genau dann wahr, wenn $P$ und $Q$ beide wahr sind
+und sonst falsch.
+\end{mydef}
+\end{frame}
+
+
+\begin{frame}
+\begin{example}
+\begin{enumerate}
+\item ($\sqrt{2}$ ist irrational) $\wedge$ ($\sqrt{2} > 0$) (Wahr.)
+\item $(2 + 2 = 4) \wedge (3 + 2 = 7)$ (Falsch.)
+\end{enumerate}
+\end{example}
+\end{frame}
+
+
+\begin{frame}
+\begin{mydef}
+Wenn $P$ und $Q$ Aussagen sind, so heißt $P \vee Q$ die \textit{Disjunktion}
+von $P$ und $Q$.
+Die definierende Wahrheitstafel ist gegeben durch:
+
+\begin{table}[H]
+\centering
+\begin{tabular}{c|c|c}
+$P$ & $Q$ & $P \vee Q$ \\ \hline
+w   & w   & w \\
+w   & f   & w \\
+f   & w   & w \\
+f   & f   & f
+\end{tabular}
+\end{table}
+
+Das heißt $P \vee Q$ ist genau dann wahr, wenn mindestens eine der beiden
+Teilaussagen wahr ist.
+\end{mydef}
+\end{frame}
+
+
+\begin{frame}
+\begin{example}
+\begin{enumerate}
+\item ($\sqrt{2}$ ist irrational) $\vee$ ($\sqrt{2} > 0$) (Wahr.)
+\item $(2 + 2 = 4) \vee (3 + 2 = 7)$ (Wahr.)
+\end{enumerate}
+\end{example}
+
+\begin{remark}
+Im Gegensatz zur Umgangssprache ist mit dem mathematischen oder stets das
+\textit{inklusive oder} gemeint.
+Möchte man das \textit{exklusive oder} verwenden, so nutzt man den Ausdruck
+\glqq entweder \ldots\ oder\ldots\grqq.
+\end{remark}
+\end{frame}
+
+
+\begin{frame}
+\begin{mydef}
+Wenn $P$ eine Aussage ist, dann heißt $\neg P$ die \textit{Negation} von $P$.
+Definierende Wahrheitstafel:
+
+\begin{table}[H]
+\centering
+\begin{tabular}{c|c}
+$P$ & $\neg P$ \\ \hline
+w   & f \\
+f   & w
+\end{tabular}
+\end{table}
+\end{mydef}
+\end{frame}
+
+
+\begin{frame}
+\begin{mydef}
+Wenn $P$ und $Q$ zwei Aussagen sind, so heißt $P \Rightarrow Q$
+(sprich: wenn $P$, dann $Q$) die \textit{Implikation} von Q durch P.
+Definierende Wahrheitstafel:
+
+\begin{table}[H]
+\centering
+\begin{tabular}{c|c|c}
+$P$ & $Q$ & $P \Rightarrow Q$ \\ \hline
+w   & w   & w \\
+w   & f   & f \\
+f   & w   & w \\
+f   & f   & w
+\end{tabular}
+\end{table}
+\end{mydef}
+
+\begin{example}
+\begin{enumerate}
+\item Wenn $ 3 > 2$, dann teilt $5$ die Zahl $10$. (Wahr.)
+\item Wenn $2 > 3$, dann ist die Erde eine Scheibe. (Wahr.)
+\end{enumerate}
+\end{example}
+\end{frame}
+
+
+\begin{frame}
+\begin{mydef}
+Wenn $P$ und $Q$ Aussagen sind, so heißt die Verknüpfung
+$(P \Rightarrow Q) \wedge (Q \Rightarrow P)$ die \textit{Äquivalenz} von
+$P$ und $Q$.
+Abkürzend schreibt man auch $P \iff Q$.
+Die definierende Wahrheitstafel ist:
+
+\begin{table}[H]
+\centering
+\begin{tabular}{c|c|c}
+$P$ & $Q$ & $P \iff Q$ \\ \hline
+w   & w   & w \\
+w   & f   & f \\
+f   & w   & f \\
+f   & f   & w
+\end{tabular}
+\end{table}
+\end{mydef}
+\end{frame}
